@@ -8,7 +8,7 @@ func _ready() -> void:
 	var circle := InteractionCircleScene.instantiate()
 	circle.duration = 3.0
 	circle.should_restart = false
-	circle.radius = TILE * 1.5 / 2.0
+	circle.radius = TILE * 1.2 / 2.0
 	circle.position = $Player.position + Vector2(TILE * 3, 0)
 	circle.on_completed = GameState.add.bind(5)
 	add_child(circle)
