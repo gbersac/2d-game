@@ -5,6 +5,11 @@ const InteractionCircleScene := preload("res://scenes/interaction_circle.tscn")
 
 
 func _ready() -> void:
+	var map_size: Vector2i = $Map.map_pixel_size()
+	var camera: Camera2D = $Player/Camera2D
+	camera.limit_right = map_size.x
+	camera.limit_bottom = map_size.y
+
 	var circle := InteractionCircleScene.instantiate()
 	circle.duration = 3.0
 	circle.should_restart = false

@@ -492,13 +492,29 @@ limit_smoothed = true
     (SCENES / "world.tscn").write_text(content)
 
 
+def make_tileset() -> list[list[tuple[int, int, int, int]]]:
+    tiles = [
+        stone_tile(0, 0),
+        wood_floor_tile(0, 0),
+        carpet_tile(),
+        wall_tile(0, 1, top=False),
+        bed_tile(),
+        crate_tile(),
+        altar_tile(),
+        pillar_tile(),
+    ]
+    sheet = blank(TILE * len(tiles), TILE)
+    for i, tile in enumerate(tiles):
+        blit(sheet, tile, i * TILE, 0)
+    return sheet
+
+
 def main() -> None:
     player = make_player()
     write_png(ASSETS / "player.png", 32, 24, player)
-    sanctuary = render_map()
-    write_png(ASSETS / "sanctuary.png", len(MAP[0]) * TILE, len(MAP) * TILE, sanctuary)
-    write_world_scene(merge_solids())
-    print("Wrote assets/player.png, assets/sanctuary.png, scenes/world.tscn")
+    tileset = make_tileset()
+    write_png(ASSETS / "tileset.png", TILE * 8, TILE, tileset)
+    print("Wrote assets/player.png, assets/tileset.png")
 
 
 if __name__ == "__main__":

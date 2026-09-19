@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjvchgir0yfm7"
-path="res://.godot/imported/sanctuary.png-3a1fd55c7a7ed603e22eb8a11db7ff9e.ctex"
+uid="uid://duccqdwplatjy"
+path="res://.godot/imported/tileset.png-c50288acd069fa293d7940a084811264.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sanctuary.png"
-dest_files=["res://.godot/imported/sanctuary.png-3a1fd55c7a7ed603e22eb8a11db7ff9e.ctex"]
+source_file="res://assets/tileset.png"
+dest_files=["res://.godot/imported/tileset.png-c50288acd069fa293d7940a084811264.ctex"]
 
 [params]
 
